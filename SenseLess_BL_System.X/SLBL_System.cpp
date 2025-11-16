@@ -13,7 +13,7 @@ static PID Theta_PID(1,1,0,0.00003333333333,M_PI,M_PI);
 SLBL_System::SLBL_System():IPD_Stat(0){
     MCPWM_Start();
     
-    MCPWM_CallbackRegister(MCPWM_CH_3,SLBL_System::MCPWM3_Match_Handler,NULL);
+    //MCPWM_CallbackRegister(MCPWM_CH_3,SLBL_System::MCPWM3_Match_Handler,NULL);
     
     Use_ADC *use_adc = new Use_ADC(3.3,20);
     

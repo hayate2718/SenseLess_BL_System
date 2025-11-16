@@ -54,7 +54,7 @@ bool Use_UART1::Data_Assign(uint8_t* data){
     }else if(strncmp("IPD_START\n",(char*)data,10)==0){
         sprintf((char*)Use_UART1::User_TX_Buf,"IPD_START!!\n");
         UART1_Write(Use_UART1::User_TX_Buf,strlen((char*)Use_UART1::User_TX_Buf));
-        SLBL_System::IPD_Start_Flag_Set();
+        //SLBL_System::IPD_Start_Flag_Set();
         
     }else if(strncmp("OPEN_LOOP\n",(char*)data,10)==0){
         sprintf((char*)Use_UART1::User_TX_Buf,"OPEN_LOOP!!\n");

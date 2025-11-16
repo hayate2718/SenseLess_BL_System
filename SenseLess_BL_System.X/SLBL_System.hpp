@@ -167,8 +167,6 @@ public:
     
     static void Mode_Set(uint8_t mode);
     
-    
-    
     static void Current_UVWtoAlpha_Beta();
     
     void Go_IPD();

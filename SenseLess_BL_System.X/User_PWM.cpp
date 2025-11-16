@@ -1,8 +1,8 @@
 #include "User_PWM.hpp"
 
-User_PWM::User_PWM(float supply_voltage,Mode_Control * _mode_control){
+User_PWM::User_PWM(float supply_voltage){
     this->Supply_Voltage = supply_voltage;
-    MCPWM_CallbackRegister(MCPWM_CH_3,SLBL_System::MCPWM3_Match_Handler,_mode_control);
+    MCPWM_CallbackRegister(MCPWM_CH_3,SLBL_System::MCPWM3_Match_Handler,NULL);
 }
 
 void User_PWM::U_Voltage_Duty(float alpha_voltage){

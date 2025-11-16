@@ -16,7 +16,7 @@
 class User_PWM{
 private:
 public:
-    User_PWM(float supply_voltage,Mode_Control * _mode_control);
+    User_PWM(float supply_voltage);
     ~User_PWM();
     
      float Supply_Voltage;
