@@ -14,9 +14,9 @@ float Angle_Normalization::Angle_Diff(float Angle){
     temp = Angle - this->Angle_Before;
     this->Angle_Before = Angle;
                 
-    if(temp >= 0 && temp >= M_PI){ //•‰‚Ì‘¬“xˆæ‚Åƒ[ƒƒNƒƒX‚·‚é‚Æ‚«
+    if(temp >= 0 && temp >= M_PI){ //è² ã®é€Ÿåº¦åŸŸã§ã‚¼ãƒ­ã‚¯ãƒ­ã‚¹ã™ã‚‹ã¨ã
         temp = temp - _2M_PI;
-    }else if(temp <= 0 && temp <= -M_PI){//³‚Ì‘¬“xˆæ‚Åƒ[ƒƒNƒƒX‚·‚é‚Æ‚«@
+    }else if(temp <= 0 && temp <= -M_PI){//æ­£ã®é€Ÿåº¦åŸŸã§ã‚¼ãƒ­ã‚¯ãƒ­ã‚¹ã™ã‚‹ã¨ãã€€
         temp = temp + _2M_PI;
     }
     return temp;
