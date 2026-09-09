@@ -29,7 +29,7 @@
     */
 
 //initial position detect
-//ƒ[ƒ^‰ŠúˆÊ’uŒŸo
+//ãƒ­ãƒ¼ã‚¿åˆæœŸä½ç½®æ¤œå‡º
 class SLBL_IPD{
 private:
     
@@ -40,8 +40,8 @@ private:
     
     uint32_t IPD_Count;
     
-    void ADC_IPD_Mode(); //ADC‚ğIPD‚Éİ’è‚·‚é
-    void ADC_Reset(); //ADC‚ğ‚à‚Æ‚É–ß‚·
+    void ADC_IPD_Mode(); //ADCã‚’IPDã«è¨­å®šã™ã‚‹
+    void ADC_Reset(); //ADCã‚’ã‚‚ã¨ã«æˆ»ã™
     
     static void ADC_Comp1_Handler(ADCHS_CHANNEL_NUM channel, uintptr_t context);
     

@@ -3,7 +3,7 @@
 
 Use_ADC::Use_ADC(float ADC_Ref_Volt,float Current_Sensitivity){
     //Current_Sensitivity = mV/A
-    this->ADC_to_Current_C = 1000*ADC_Ref_Volt/(Current_Sensitivity*ADC_Resolution); //ADC�ϊ����ʂƐώZ����Ɠd���ɕϊ������萔
+    this->ADC_to_Current_C = 1000*ADC_Ref_Volt/(Current_Sensitivity*ADC_Resolution); //ADC変換結果と積算すると電流に変換される定数
     
     ADCHS_Comparator1Disable();
     
@@ -29,17 +29,17 @@ bool Use_ADC::ADC_Calibration(){
     uint32_t adc0_buf = 0;
     uint32_t adc2_buf = 0;
     
-    ADCCON3bits.TRGSUSP = 1; //�ϊ����~
+    ADCCON3bits.TRGSUSP = 1; //変換を停止
     
-    while(!ADCCON3bits.UPDRDY); //���ׂĂ̕ϊ�����~���Ă��邱�Ƃ��m�F
+    while(!ADCCON3bits.UPDRDY); //すべての変換が停止していることを確認
     
-    ADCTRG1 = 0x20002U; //�O���[�o���\�t�g�E�F�A���x���g���K��ݒ�
-    ADCTRGSNSbits.LVL0 = 1; //�g���KHi�ŏ�Ƀg���K��������悤�ɐݒ�
+    ADCTRG1 = 0x20002U; //グローバルソフトウェアレベルトリガを設定
+    ADCTRGSNSbits.LVL0 = 1; //トリガHiで常にトリガがかかるように設定
     ADCTRGSNSbits.LVL2 = 1;
     
-    ADCCON3bits.TRGSUSP = 0; //�ϊ����ĊJ
+    ADCCON3bits.TRGSUSP = 0; //変換を再開
     
-    ADCCON3bits.GLSWTRG = 1; //�O���[�o���\�t�g�E�F�A���x���g���K�𔭍s
+    ADCCON3bits.GLSWTRG = 1; //グローバルソフトウェアレベルトリガを発行
     
     for(uint8_t i = 0; i < 100; i++){
         
