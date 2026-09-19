@@ -59,12 +59,31 @@
       <itemPath>User_Math.hpp</itemPath>
       <itemPath>User_PWM.hpp</itemPath>
       <itemPath>Mode_Transition.hpp</itemPath>
+      <itemPath>SLBL_Motor.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="SenseLess_BL_System_default"
+                     displayName="SenseLess_BL_System_default"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>SenseLess_BL_System_default/components/can1.yml</itemPath>
+          <itemPath>SenseLess_BL_System_default/components/dfp.yml</itemPath>
+          <itemPath>SenseLess_BL_System_default/components/adchs.yml</itemPath>
+          <itemPath>SenseLess_BL_System_default/components/mcpwm.yml</itemPath>
+          <itemPath>SenseLess_BL_System_default/components/tmr2.yml</itemPath>
+          <itemPath>SenseLess_BL_System_default/components/tmr1.yml</itemPath>
+          <itemPath>SenseLess_BL_System_default/components/uart1.yml</itemPath>
+          <itemPath>SenseLess_BL_System_default/components/core.yml</itemPath>
+        </logicalFolder>
+        <itemPath>SenseLess_BL_System_default/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>SenseLess_BL_System.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -128,6 +147,7 @@
       <itemPath>Angle_Normalization.cpp</itemPath>
       <itemPath>User_PWM.cpp</itemPath>
       <itemPath>Mode_Transition.cpp</itemPath>
+      <itemPath>SLBL_Motor.cpp</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -144,7 +164,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>snap</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>5.10</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -690,6 +710,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d07ffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/0_hayate/Desktop/SenseLess_BL_System/SenseLess_BL_System.X/debug/default/SenseLess_BL_System_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

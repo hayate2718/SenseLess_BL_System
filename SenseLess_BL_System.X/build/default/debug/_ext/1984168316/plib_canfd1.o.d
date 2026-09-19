@@ -5,13 +5,8 @@ build/default/debug/_ext/1984168316/plib_canfd1.o: \
  ../src/config/default/toolchain_specifics.h \
  ../src/config/default/peripheral/canfd/plib_canfd_common.h \
  ../src/config/default/interrupts.h
-
 ../src/config/default/peripheral/canfd/plib_canfd1.h:
-
 ../src/config/default/device.h:
-
 ../src/config/default/toolchain_specifics.h:
-
 ../src/config/default/peripheral/canfd/plib_canfd_common.h:
-
 ../src/config/default/interrupts.h:

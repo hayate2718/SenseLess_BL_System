@@ -1,0 +1,302 @@
+configVersion: 1.0.0
+componentName: can1
+coreVersion: 5.9.0
+device: PIC32MK0512MCJ048
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: can1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.20.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: can1
+          x: '28'
+          y: '331'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CALCULATED_DATA_BITRATE:
+      attributes:
+        id: CALCULATED_DATA_BITRATE
+        label: Calculated Bit Rate (Kbps)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '500'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CALCULATED_DATA_ERRORRATE:
+      attributes:
+        id: CALCULATED_DATA_ERRORRATE
+        label: Error %
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '0.000'
+          type: Dynamic
+        type: Values
+      type: String
+    CALCULATED_NOMINAL_BITRATE:
+      attributes:
+        id: CALCULATED_NOMINAL_BITRATE
+        label: Calculated Bit Rate (Kbps)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '500'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CALCULATED_NOMINAL_ERRORRATE:
+      attributes:
+        id: CALCULATED_NOMINAL_ERRORRATE
+        label: Error %
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '0.000'
+          type: Dynamic
+        type: Values
+      type: String
+    CAN_CORE_CLOCK_FREQ:
+      attributes:
+        id: CAN_CORE_CLOCK_FREQ
+        label: Clock Frequency
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '300000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CAN_INTERRUPT_MODE:
+      attributes:
+        id: CAN_INTERRUPT_MODE
+        label: Interrupt Mode
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    CAN_OPMODE:
+      attributes:
+        id: CAN_OPMODE
+        label: CAN Operation Mode
+      children:
+      - children:
+        - attributes:
+            value: '6'
+          type: User
+        type: Values
+      type: KeyValueSet
+    DATA_TIME_QUANTA_PERIOD:
+      attributes:
+        id: DATA_TIME_QUANTA_PERIOD
+        label: Time Quanta (ns)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '50.000'
+          type: Dynamic
+        type: Values
+      type: String
+    DBT_SJW:
+      attributes:
+        id: DBT_SJW
+        label: Synchronization Jump Width (TQ)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '10'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DBT_TOTAL_TIME_QUANTA:
+      attributes:
+        id: DBT_TOTAL_TIME_QUANTA
+        label: Total Time Quanta (TQ)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '40'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DBT_TSEG1:
+      attributes:
+        id: DBT_TSEG1
+        label: Time Segment Before Sample Point (TQ)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '29'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DBT_TSEG2:
+      attributes:
+        id: DBT_TSEG2
+        label: Time Segment After Sample Point (TQ)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '10'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FIFO_OFFSET:
+      attributes:
+        id: FIFO_OFFSET
+        label: FIFO Register offset
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '0xc'
+          type: Dynamic
+        type: Values
+      type: String
+    FILTER_OBJ_MASK_OFFSET:
+      attributes:
+        id: FILTER_OBJ_MASK_OFFSET
+        label: Filter Object and Mask Register offset
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '0x8'
+          type: Dynamic
+        type: Values
+      type: String
+    FILTER_OFFSET:
+      attributes:
+        id: FILTER_OFFSET
+        label: Filter Register offset
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '0x4'
+          type: Dynamic
+        type: Values
+      type: String
+    NBT_SJW:
+      attributes:
+        id: NBT_SJW
+        label: Synchronization Jump Width (TQ)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '10'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBT_TOTAL_TIME_QUANTA:
+      attributes:
+        id: NBT_TOTAL_TIME_QUANTA
+        label: Total Time Quanta (TQ)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '40'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBT_TSEG1:
+      attributes:
+        id: NBT_TSEG1
+        label: Phase 1 Segment (TQ)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '29'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBT_TSEG2:
+      attributes:
+        id: NBT_TSEG2
+        label: Phase 2 Segment (TQ)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '10'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NOMINAL_TIME_QUANTA_PERIOD:
+      attributes:
+        id: NOMINAL_TIME_QUANTA_PERIOD
+        label: Time Quanta (ns)
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '50.000'
+          type: Dynamic
+        type: Values
+      type: String
+    TX_EVENT_FIFO_MESSAGE_BUFFER:
+      attributes:
+        id: TX_EVENT_FIFO_MESSAGE_BUFFER
+        label: Number of Message Buffer
+      children:
+      - children:
+        - attributes:
+            value: '10'
+          type: User
+        type: Values
+      type: Integer
+    TX_QUEUE_MESSAGE_BUFFER:
+      attributes:
+        id: TX_QUEUE_MESSAGE_BUFFER
+        label: Number of Message Buffer
+      children:
+      - children:
+        - attributes:
+            value: '10'
+          type: User
+        type: Values
+      type: Integer
+    TX_QUEUE_PAYLOAD_SIZE:
+      attributes:
+        id: TX_QUEUE_PAYLOAD_SIZE
+        label: Payload Size
+      children:
+      - children:
+        - attributes:
+            value: '7'
+          type: User
+        type: Values
+      type: KeyValueSet
+  userData: {}

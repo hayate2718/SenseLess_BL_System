@@ -1,0 +1,120 @@
+configVersion: 1.0.0
+componentName: tmr1
+coreVersion: 5.9.0
+device: PIC32MK0512MCJ048
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: tmr1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.20.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: tmr1
+          x: '30'
+          y: '98'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    TCON_REG_VALUE:
+      attributes:
+        id: TCON_REG_VALUE
+        label: TCON_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: '8496'
+          type: Dynamic
+        type: Values
+      type: Hex
+    TIMER1_CLOCK_FREQ:
+      attributes:
+        id: TIMER1_CLOCK_FREQ
+        label: Timer1 Clock Frequency
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: '585937'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TIMER1_PERIOD:
+      attributes:
+        id: TIMER1_PERIOD
+        label: Period Register
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: '29295'
+          type: Dynamic
+        type: Values
+      type: Long
+    TIMER1_PRE_SCALER:
+      attributes:
+        id: TIMER1_PRE_SCALER
+        label: Select Prescaler
+      children:
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: KeyValueSet
+    TIMER1_SIDL:
+      attributes:
+        id: TIMER1_SIDL
+        label: Stop in Idle Mode bit
+      children:
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: KeyValueSet
+    TIMER1_TIME_PERIOD_MS:
+      attributes:
+        id: TIMER1_TIME_PERIOD_MS
+        label: Time
+      children:
+      - children:
+        - attributes:
+            id: max
+          children:
+          - type: Value
+            value: '111.84991'
+          type: Float
+        type: Attributes
+      - children:
+        - attributes:
+            value: '50.0'
+          type: User
+        type: Values
+      type: Float
+    TMR1_PRESCALER_VALUE:
+      attributes:
+        id: TMR1_PRESCALER_VALUE
+        label: TMR1_PRESCALER_VALUE
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: '256'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}
