@@ -5,6 +5,13 @@
         <group>
             <file>file:/C:/Users/0_hayate/Desktop/CoRE/2025/SenseLess_BL_System/SenseLess_BL_System.X/SLBL_OpenLoop.hpp</file>
             <file>file:/C:/Users/0_hayate/Desktop/CoRE/2025/SenseLess_BL_System/SenseLess_BL_System.X/SLBL_Motor.hpp</file>
+            <file>file:/C:/Users/0_hayate/Desktop/CoRE/2025/SenseLess_BL_System/SenseLess_BL_System.X/SLBL_System.hpp</file>
+            <file>file:/C:/Users/0_hayate/Desktop/CoRE/2025/SenseLess_BL_System/SenseLess_BL_System.X/SLBL_IPD.hpp</file>
+            <file>file:/C:/Users/0_hayate/Desktop/CoRE/2025/SenseLess_BL_System/SenseLess_BL_System.X/Use_UART1.hpp</file>
+            <file>file:/C:/Users/0_hayate/Desktop/CoRE/2025/SenseLess_BL_System/src/main.cpp</file>
+            <file>file:/C:/Users/0_hayate/Desktop/CoRE/2025/SenseLess_BL_System/SenseLess_BL_System.X/SLBL_IPD.cpp</file>
+            <file>file:/C:/Users/0_hayate/Desktop/CoRE/2025/SenseLess_BL_System/SenseLess_BL_System.X/SLBL_System.cpp</file>
+            <file>file:/C:/Users/0_hayate/Desktop/CoRE/2025/SenseLess_BL_System/SenseLess_BL_System.X/Use_ADC.cpp</file>
         </group>
     </open-files>
 </project-private>

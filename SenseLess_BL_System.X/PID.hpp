@@ -13,22 +13,22 @@
 class PID
 {
 private:
-	float p; //æ¯”ä¾‹ã‚²ã‚¤ãƒ³
-	float i; //ç©åˆ†ã‚²ã‚¤ãƒ³
-	float d; //å¾®åˆ†ã‚²ã‚¤ãƒ³
+	float p; //”ä—áƒQƒCƒ“
+	float i; //Ï•ªƒQƒCƒ“
+	float d; //”÷•ªƒQƒCƒ“
 	
-	float dt; //å¾®å°æ™‚é–“ï¼ˆåˆ¶å¾¡å‘¨æœŸï¼‰
+	float dt; //”÷¬ŠÔi§ŒäüŠúj
 	
-	float error; //åå·®
-	float i_sum; //ç©åˆ†åˆ¶å¾¡ç”¨åå·®ãƒãƒƒãƒ•ã‚¡
-	float error_before; //å‰å›åå·®
+	float error; //•Î·
+	float i_sum; //Ï•ª§Œä—p•Î·ƒoƒbƒtƒ@
+	float error_before; //‘O‰ñ•Î·
 
-	float p_mv; //å„PIDåˆ¶å¾¡é …ã®æ“ä½œé‡
+	float p_mv; //ŠePID§Œä€‚Ì‘€ì—Ê
 	float i_mv;
 	float d_mv;
 
-	float i_lim; //ç©åˆ†ãƒªãƒŸãƒƒã‚¿
-	float mv_lim; //åˆ¶å¾¡é‡ãƒªãƒŸãƒƒã‚¿
+	float i_lim; //Ï•ªƒŠƒ~ƒbƒ^
+	float mv_lim; //§Œä—ÊƒŠƒ~ƒbƒ^
 
 public:
 	PID(float p,float i,float d,float dt,float i_lim,float mv_lim);
@@ -67,7 +67,7 @@ inline PID::PID(float p,float i,float d,float dt,float i_lim,float mv_lim):
 }
 
 
-// PIDã‚²ã‚¤ãƒ³ã®ã‚»ãƒƒãƒˆé–¢æ•°
+// PIDƒQƒCƒ“‚ÌƒZƒbƒgŠÖ”
 inline void PID::PID_set_p(float p){
 	this->p = p;
 }
@@ -80,23 +80,23 @@ inline void PID::PID_set_d(float d){
 	this->d = d;
 }
 
-//PIDåˆ¶å¾¡ã®å¾®å°æ™‚é–“é …ã‚’ã‚»ãƒƒãƒˆï¼ˆå¤šãã®å ´åˆã¯åˆ¶å¾¡å‘¨æœŸï¼‰
+//PID§Œä‚Ì”÷¬ŠÔ€‚ğƒZƒbƒgi‘½‚­‚Ìê‡‚Í§ŒäüŠúj
 inline void PID::PID_set_dt(float dt){
 	this->dt = dt;
 }
 
-//ç©åˆ†åˆ¶å¾¡é …ã®ãƒªãƒŸãƒƒã‚¿ã‚’ã‚»ãƒƒãƒˆã™ã‚‹é–¢æ•°
+//Ï•ª§Œä€‚ÌƒŠƒ~ƒbƒ^‚ğƒZƒbƒg‚·‚éŠÖ”
 inline void PID::PID_set_i_lim(float lim){
 	this->i_lim = lim;
 }
 
 
-//PIDåˆ¶å¾¡å…¨ä½“ã®æ“ä½œé‡ã®ãƒªãƒŸãƒƒã‚¿ã‚’ã‚»ãƒƒãƒˆã™ã‚‹é–¢æ•°
+//PID§Œä‘S‘Ì‚Ì‘€ì—Ê‚ÌƒŠƒ~ƒbƒ^‚ğƒZƒbƒg‚·‚éŠÖ”
 inline void PID::PID_set_mv_lim(float lim){
 	this->mv_lim = lim;
 }
 
-//PIDã‚²ã‚¤ãƒ³ã®ã‚²ãƒƒãƒˆé–¢æ•°
+//PIDƒQƒCƒ“‚ÌƒQƒbƒgŠÖ”
 inline float PID::PID_get_p(){
 	float p;
 	p = this->p;
@@ -115,13 +115,13 @@ inline float PID::PID_get_d(){
 	return d;
 }
 
-//PIDåˆ¶å¾¡ã®å®Ÿä½“ã®é–¢æ•°
+//PID§Œä‚ÌÀ‘Ì‚ÌŠÖ”
 inline float PID::PID_controller(float error){
-	float MV = 0; //PIDã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©æ“ä½œé‡
+	float MV = 0; //PIDƒRƒ“ƒgƒ[ƒ‰‘€ì—Ê
 
-	i_sum = i_sum + dt*(error+error_before)/2; //å¾®å°æ™‚é–“ã®é–“ç·šå½¢ã«å‹•ã„ã¦ã„ãŸã¨ã—ã¦
+	i_sum = i_sum + dt*(error+error_before)/2; //”÷¬ŠÔ‚ÌŠÔüŒ`‚É“®‚¢‚Ä‚¢‚½‚Æ‚µ‚Ä
 
-	if(fabsf(i_sum) > this->i_lim){ //ç©åˆ†åˆ¶å¾¡ã®ãƒªãƒŸãƒƒã‚¿ã‚’é©ç”¨
+	if(fabsf(i_sum) > this->i_lim){ //Ï•ª§Œä‚ÌƒŠƒ~ƒbƒ^‚ğ“K—p
 		if(i_sum > 0){
 			i_sum = i_lim;
 		}else{
@@ -129,13 +129,13 @@ inline float PID::PID_controller(float error){
 		}
 	}
 
-	p_mv = this->p*error; //å„åˆ¶å¾¡ã‚²ã‚¤ãƒ³ã‚’é©ç”¨
+	p_mv = this->p*error; //Še§ŒäƒQƒCƒ“‚ğ“K—p
 	i_mv = this->i*i_sum;
 	d_mv = this->d*(error-error_before)/dt;
 
-	MV = p_mv+i_mv+d_mv; //åˆ¶å¾¡é‡ã‚’æ±ºå®šã™ã‚‹
+	MV = p_mv+i_mv+d_mv; //§Œä—Ê‚ğŒˆ’è‚·‚é
 
-	if(fabsf(MV) > this->mv_lim){ //åˆ¶å¾¡é‡ã®ãƒªãƒŸãƒƒã‚¿ã‚’é©ç”¨
+	if(fabsf(MV) > this->mv_lim){ //§Œä—Ê‚ÌƒŠƒ~ƒbƒ^‚ğ“K—p
 		if(MV > 0){
 			MV = mv_lim;
 		}else{
@@ -148,7 +148,7 @@ inline float PID::PID_controller(float error){
 	return MV;
 }
 
-//ç©åˆ†ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®ãƒªã‚»ãƒƒãƒˆé–¢æ•°
+//Ï•ªƒpƒ‰ƒ[ƒ^‚ÌƒŠƒZƒbƒgŠÖ”
 inline void PID::PID_reset(){
 	i_sum = 0;
 	error_before = 0;

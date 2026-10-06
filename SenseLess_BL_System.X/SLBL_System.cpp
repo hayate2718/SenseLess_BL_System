@@ -26,7 +26,7 @@ SLBL_System::SLBL_System():IPD_Stat(0){
 }
 
 void SLBL_System::Go_IPD(){
-    SLBL_IPD * slbl_ipd = new SLBL_IPD(2000,2100);
+    SLBL_IPD * slbl_ipd = new SLBL_IPD(1900,2200);
     slbl_ipd->IPD_Start();
     delete slbl_ipd;
     

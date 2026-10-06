@@ -22,6 +22,7 @@ Use_TMR1::Use_TMR1():cycle_cnt(0),tmr_cnt(0){
 
 void Use_TMR1::Use_TMR1_Callback(uint32_t status, uintptr_t context){
     
+    /*
     //PORTBbits.RB5 ^= 1;
     uint8_t txbuf[32] = {};
     float buf;
@@ -37,6 +38,6 @@ void Use_TMR1::Use_TMR1_Callback(uint32_t status, uintptr_t context){
     
     sprintf((char*)txbuf,"or=%f\n",buf);
     UART1_Write(txbuf,strlen((char*)txbuf));
-  
+    */
     
 }
