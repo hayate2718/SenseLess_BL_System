@@ -15,6 +15,7 @@
 #include "Mode_Transition.hpp"
 
 extern volatile uint8_t match_flag;
+extern volatile uint32_t pwm_tick;
 
 class User_PWM{
 private:
@@ -36,6 +37,7 @@ public:
     void W_Voltage_Duty(float alpha_voltage,float beta_voltage);
     
     void Vector_Voltage_Duty(float angle,float voltage);
+    void Alpha_Beta_Voltage_Duty(float alpha_voltage, float beta_voltage);
     
 };
 

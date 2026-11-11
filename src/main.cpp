@@ -43,10 +43,12 @@ int main ( void )
 {
     /* Initialize all modules */
     SYS_Initialize ( NULL );
+    const uint32_t start_tick = _CP0_GET_COUNT();
     
     Use_GPIO use_gpio;
     Use_TMR1 use_tmr1;
     SLBL_System slbl_system;
+    SLBL_System::FOC_Start_Tick = start_tick;
     
     slbl_system.Go_IPD();
     
@@ -54,7 +56,7 @@ int main ( void )
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */
         SYS_Tasks ( );
-        slbl_system.Open_Loop();
+        slbl_system.Vector_Control();
     }
 
     /* Execution should not come here during normal operation */

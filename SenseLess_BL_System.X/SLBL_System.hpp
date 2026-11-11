@@ -22,6 +22,7 @@
 #include "SLBL_Motor.hpp"
 
 #include "Angle_Normalization.hpp"
+#include "Sensorless_FOC.hpp"
 
 typedef enum{
     Default_Mode,
@@ -47,7 +48,10 @@ class SLBL_System{
 private:
     
     Angle_Normalization angle_norm;
-    User_PWM user_pwm{12};
+    User_PWM user_pwm{sensorless_foc::SupplyVoltage};
+    sensorless_foc::Controller vector_controller;
+    void Update_Observer();
+    void Stop_Vector_Output();
     
     static volatile Control_Mode Mode;
     
@@ -90,6 +94,22 @@ public:
     void Go_IPD();
     
     void Open_Loop();
+    void Vector_Control();
+    static volatile float FOC_Speed_Hz;
+    static volatile float FOC_Target_Hz;
+    static volatile float FOC_Id;
+    static volatile float FOC_Iq;
+    static volatile float FOC_Iq_Ref;
+    static volatile float FOC_Voltage;
+    static volatile float FOC_Sample_Hz;
+    static volatile float FOC_Phase_Error;
+    static volatile float FOC_Startup_Phase_Error;
+    static volatile uint32_t FOC_Start_Tick;
+    static volatile uint32_t FOC_Elapsed_Ms;
+    static volatile uint32_t FOC_Target_Time_Ms;
+    static volatile uint32_t FOC_ClosedLoop_Time_Ms;
+    static volatile uint8_t FOC_State;
+    static volatile uint8_t FOC_Fault;
     
     static float Data_Get();
     static float Data2_Get();
