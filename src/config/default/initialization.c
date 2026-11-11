@@ -190,9 +190,9 @@ void SYS_Initialize ( void* data )
 
     TMR2_Initialize();
 
-    TMR1_Initialize();
-
     MCPWM_Initialize();
+
+    TMR1_Initialize();
 
 
     EVIC_Initialize();

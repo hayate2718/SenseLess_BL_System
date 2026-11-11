@@ -84,7 +84,7 @@ data:
       - children:
         - attributes:
             id: can1
-            value: '300000000'
+            value: '120000000'
           type: Dynamic
         type: Values
       type: Integer
@@ -118,7 +118,7 @@ data:
       - children:
         - attributes:
             id: can1
-            value: '50.000'
+            value: '125.000'
           type: Dynamic
         type: Values
       type: String
@@ -130,7 +130,7 @@ data:
       - children:
         - attributes:
             id: can1
-            value: '10'
+            value: '4'
           type: Dynamic
         type: Values
       type: Integer
@@ -142,7 +142,7 @@ data:
       - children:
         - attributes:
             id: can1
-            value: '40'
+            value: '16'
           type: Dynamic
         type: Values
       type: Integer
@@ -154,7 +154,7 @@ data:
       - children:
         - attributes:
             id: can1
-            value: '29'
+            value: '11'
           type: Dynamic
         type: Values
       type: Integer
@@ -166,7 +166,7 @@ data:
       - children:
         - attributes:
             id: can1
-            value: '10'
+            value: '4'
           type: Dynamic
         type: Values
       type: Integer
@@ -214,7 +214,7 @@ data:
       - children:
         - attributes:
             id: can1
-            value: '10'
+            value: '4'
           type: Dynamic
         type: Values
       type: Integer
@@ -226,7 +226,7 @@ data:
       - children:
         - attributes:
             id: can1
-            value: '40'
+            value: '16'
           type: Dynamic
         type: Values
       type: Integer
@@ -238,7 +238,7 @@ data:
       - children:
         - attributes:
             id: can1
-            value: '29'
+            value: '11'
           type: Dynamic
         type: Values
       type: Integer
@@ -250,7 +250,7 @@ data:
       - children:
         - attributes:
             id: can1
-            value: '10'
+            value: '4'
           type: Dynamic
         type: Values
       type: Integer
@@ -262,7 +262,7 @@ data:
       - children:
         - attributes:
             id: can1
-            value: '50.000'
+            value: '125.000'
           type: Dynamic
         type: Values
       type: String

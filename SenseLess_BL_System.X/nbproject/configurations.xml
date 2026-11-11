@@ -53,7 +53,6 @@
       <itemPath>SLBL_System.hpp</itemPath>
       <itemPath>PID.hpp</itemPath>
       <itemPath>SLBL_IPD.hpp</itemPath>
-      <itemPath>SLBL_OpenLoop.hpp</itemPath>
       <itemPath>Use_ADC.hpp</itemPath>
       <itemPath>Angle_Normalization.hpp</itemPath>
       <itemPath>User_Math.hpp</itemPath>
@@ -142,7 +141,6 @@
       <itemPath>SLBL_System.cpp</itemPath>
       <itemPath>../src/main.cpp</itemPath>
       <itemPath>SLBL_IPD.cpp</itemPath>
-      <itemPath>SLBL_OpenLoop.cpp</itemPath>
       <itemPath>Use_ADC.cpp</itemPath>
       <itemPath>Angle_Normalization.cpp</itemPath>
       <itemPath>User_PWM.cpp</itemPath>
@@ -200,6 +198,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -278,6 +277,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -323,6 +323,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

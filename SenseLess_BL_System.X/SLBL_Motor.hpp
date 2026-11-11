@@ -14,6 +14,8 @@ typedef struct {
     float Motor_Phi;
     float Motor_Pole_Pair;
     float Motor_Kv;
+    float Motor_a;
+    float Motor_b;
 }Motor_Param;
 
 #endif	/* SLBL_MOTOR_HPP */

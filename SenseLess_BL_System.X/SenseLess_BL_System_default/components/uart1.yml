@@ -36,7 +36,7 @@ data:
       - children:
         - attributes:
             id: uart1
-            value: '650'
+            value: '259'
           type: Dynamic
         type: Values
       type: Integer
@@ -71,7 +71,7 @@ data:
       - children:
         - attributes:
             id: uart1
-            value: '300000000'
+            value: '120000000'
           type: Dynamic
         type: Values
       type: Integer

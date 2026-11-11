@@ -36,7 +36,7 @@ data:
       - children:
         - attributes:
             id: tmr2
-            value: '150000000'
+            value: '60000000'
           type: Dynamic
         type: Values
       type: Integer
@@ -48,7 +48,7 @@ data:
       - children:
         - attributes:
             id: tmr2
-            value: '44999'
+            value: '17999'
           type: Dynamic
         type: Values
       type: Long
@@ -62,7 +62,7 @@ data:
             id: max
           children:
           - type: Value
-            value: '0.43691334'
+            value: '1.0922834'
           type: Float
         type: Attributes
       type: Float
