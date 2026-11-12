@@ -13,12 +13,13 @@ build/default/debug/Use_UART1.o: Use_UART1.cpp Use_UART1.hpp \
  ../src/config/default/peripheral/clk/plib_clk.h \
  ../src/config/default/peripheral/gpio/plib_gpio.h \
  ../src/config/default/peripheral/evic/plib_evic.h \
- ../src/config/default/peripheral/tmr1/plib_tmr1.h \
- ../src/config/default/peripheral/tmr1/plib_tmr1_common.h \
  ../src/config/default/peripheral/mcpwm/plib_mcpwm.h \
  ../src/config/default/peripheral/mcpwm/plib_mcpwm_common.h \
- SLBL_System.hpp Use_GPIO.hpp Use_TMR1.hpp SLBL_IPD.hpp Use_ADC.hpp \
- PID.hpp
+ ../src/config/default/peripheral/tmr1/plib_tmr1.h \
+ ../src/config/default/peripheral/tmr1/plib_tmr1_common.h SLBL_System.hpp \
+ Use_GPIO.hpp Use_TMR1.hpp User_PWM.hpp User_Math.hpp Mode_Transition.hpp \
+ SLBL_IPD.hpp Use_ADC.hpp PID.hpp SLBL_Motor.hpp Angle_Normalization.hpp \
+ Sensorless_FOC.hpp
 Use_UART1.hpp:
 ../src/config/default/definitions.h:
 ../src/config/default/peripheral/adchs/plib_adchs.h:
@@ -34,13 +35,19 @@ Use_UART1.hpp:
 ../src/config/default/peripheral/clk/plib_clk.h:
 ../src/config/default/peripheral/gpio/plib_gpio.h:
 ../src/config/default/peripheral/evic/plib_evic.h:
-../src/config/default/peripheral/tmr1/plib_tmr1.h:
-../src/config/default/peripheral/tmr1/plib_tmr1_common.h:
 ../src/config/default/peripheral/mcpwm/plib_mcpwm.h:
 ../src/config/default/peripheral/mcpwm/plib_mcpwm_common.h:
+../src/config/default/peripheral/tmr1/plib_tmr1.h:
+../src/config/default/peripheral/tmr1/plib_tmr1_common.h:
 SLBL_System.hpp:
 Use_GPIO.hpp:
 Use_TMR1.hpp:
+User_PWM.hpp:
+User_Math.hpp:
+Mode_Transition.hpp:
 SLBL_IPD.hpp:
 Use_ADC.hpp:
 PID.hpp:
+SLBL_Motor.hpp:
+Angle_Normalization.hpp:
+Sensorless_FOC.hpp:

@@ -13,16 +13,22 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.cpp \
  ../src/config/default/peripheral/clk/plib_clk.h \
  ../src/config/default/peripheral/gpio/plib_gpio.h \
  ../src/config/default/peripheral/evic/plib_evic.h \
- ../src/config/default/peripheral/tmr1/plib_tmr1.h \
- ../src/config/default/peripheral/tmr1/plib_tmr1_common.h \
  ../src/config/default/peripheral/mcpwm/plib_mcpwm.h \
  ../src/config/default/peripheral/mcpwm/plib_mcpwm_common.h \
+ ../src/config/default/peripheral/tmr1/plib_tmr1.h \
+ ../src/config/default/peripheral/tmr1/plib_tmr1_common.h \
  ../SenseLess_BL_System.X/SLBL_System.hpp \
  ../SenseLess_BL_System.X/Use_GPIO.hpp \
  ../SenseLess_BL_System.X/Use_UART1.hpp \
  ../SenseLess_BL_System.X/Use_TMR1.hpp \
+ ../SenseLess_BL_System.X/User_PWM.hpp \
+ ../SenseLess_BL_System.X/User_Math.hpp \
+ ../SenseLess_BL_System.X/Mode_Transition.hpp \
  ../SenseLess_BL_System.X/SLBL_IPD.hpp \
  ../SenseLess_BL_System.X/Use_ADC.hpp ../SenseLess_BL_System.X/PID.hpp \
+ ../SenseLess_BL_System.X/SLBL_Motor.hpp \
+ ../SenseLess_BL_System.X/Angle_Normalization.hpp \
+ ../SenseLess_BL_System.X/Sensorless_FOC.hpp \
  ../SenseLess_BL_System.X/Use_TMR1.hpp \
  ../SenseLess_BL_System.X/Use_GPIO.hpp \
  ../SenseLess_BL_System.X/SLBL_IPD.hpp
@@ -40,17 +46,23 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.cpp \
 ../src/config/default/peripheral/clk/plib_clk.h:
 ../src/config/default/peripheral/gpio/plib_gpio.h:
 ../src/config/default/peripheral/evic/plib_evic.h:
-../src/config/default/peripheral/tmr1/plib_tmr1.h:
-../src/config/default/peripheral/tmr1/plib_tmr1_common.h:
 ../src/config/default/peripheral/mcpwm/plib_mcpwm.h:
 ../src/config/default/peripheral/mcpwm/plib_mcpwm_common.h:
+../src/config/default/peripheral/tmr1/plib_tmr1.h:
+../src/config/default/peripheral/tmr1/plib_tmr1_common.h:
 ../SenseLess_BL_System.X/SLBL_System.hpp:
 ../SenseLess_BL_System.X/Use_GPIO.hpp:
 ../SenseLess_BL_System.X/Use_UART1.hpp:
 ../SenseLess_BL_System.X/Use_TMR1.hpp:
+../SenseLess_BL_System.X/User_PWM.hpp:
+../SenseLess_BL_System.X/User_Math.hpp:
+../SenseLess_BL_System.X/Mode_Transition.hpp:
 ../SenseLess_BL_System.X/SLBL_IPD.hpp:
 ../SenseLess_BL_System.X/Use_ADC.hpp:
 ../SenseLess_BL_System.X/PID.hpp:
+../SenseLess_BL_System.X/SLBL_Motor.hpp:
+../SenseLess_BL_System.X/Angle_Normalization.hpp:
+../SenseLess_BL_System.X/Sensorless_FOC.hpp:
 ../SenseLess_BL_System.X/Use_TMR1.hpp:
 ../SenseLess_BL_System.X/Use_GPIO.hpp:
 ../SenseLess_BL_System.X/SLBL_IPD.hpp:
