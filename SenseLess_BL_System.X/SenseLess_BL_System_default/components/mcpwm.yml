@@ -441,7 +441,7 @@ data:
       - children:
         - attributes:
             id: mcpwm
-            value: '150000.0'
+            value: '60000.0'
           type: Dynamic
         type: Values
       type: Float
@@ -465,7 +465,7 @@ data:
       - children:
         - attributes:
             id: mcpwm
-            value: '1049600'
+            value: '525312'
           type: Dynamic
         type: Values
       type: Hex
@@ -501,7 +501,7 @@ data:
       - children:
         - attributes:
             id: mcpwm
-            value: '150000.0'
+            value: '60000.0'
           type: Dynamic
         type: Values
       type: Float
@@ -658,7 +658,7 @@ data:
       children:
       - children:
         - attributes:
-            value: 'false'
+            value: 'true'
           type: User
         type: Values
       type: Boolean
@@ -669,7 +669,7 @@ data:
       children:
       - children:
         - attributes:
-            value: 'true'
+            value: 'false'
           type: User
         type: Values
       type: Boolean
@@ -857,6 +857,9 @@ data:
             id: mcpwm
             value: '1'
           type: Dynamic
+        - attributes:
+            value: '1'
+          type: User
         type: Values
       type: KeyValueSet
     TRGCON5__TRGSEL:
@@ -893,6 +896,9 @@ data:
             id: mcpwm
             value: '1990'
           type: Dynamic
+        - attributes:
+            value: '1990'
+          type: User
         type: Values
       type: Integer
     TRIG5__TRGCMP:

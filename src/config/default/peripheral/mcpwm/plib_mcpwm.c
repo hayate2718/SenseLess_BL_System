@@ -76,12 +76,12 @@ void MCPWM_Initialize (void)
     /*  DTCP   =  0 */
     /*  DTC    =  0 */
     /*  ITB    = 0 */
-    /*  PWMHIEN =  false */
-    /*  PWMLIEN = true */
+    /*  PWMHIEN =  true */
+    /*  PWMLIEN = false */
     /*  TRGIEN = false */
     /*  CLIEN = false */
     /*  FLTIEN = false */
-    PWMCON3 = 0x100400;
+    PWMCON3 = 0x80400;
 
     /* IOCON3 register  */
     /*  SWAP    = 0*/

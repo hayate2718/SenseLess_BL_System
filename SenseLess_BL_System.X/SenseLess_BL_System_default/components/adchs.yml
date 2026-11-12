@@ -889,7 +889,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '769.2308'
+            value: '307.69232'
           type: Dynamic
         type: Values
       type: Float
@@ -909,7 +909,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '9375.0'
+            value: '3750.0002'
           type: Dynamic
         type: Values
       type: Float
@@ -921,7 +921,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '769.2308'
+            value: '307.69232'
           type: Dynamic
         type: Values
       type: Float
@@ -941,7 +941,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '9375.0'
+            value: '3750.0002'
           type: Dynamic
         type: Values
       type: Float
@@ -961,7 +961,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '9375.0'
+            value: '3750.0002'
           type: Dynamic
         type: Values
       type: Float
@@ -981,7 +981,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '9375.0'
+            value: '3750.0002'
           type: Dynamic
         type: Values
       type: Float
@@ -993,7 +993,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '8823.529'
+            value: '3529.4119'
           type: Dynamic
         type: Values
       type: Float
@@ -1089,7 +1089,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '20.0'
+            value: '50.0'
           type: Dynamic
         type: Values
       type: Float
@@ -1109,7 +1109,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '6.6666665'
+            value: '16.666666'
           type: Dynamic
         type: Values
       type: Float
@@ -1121,7 +1121,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '20.0'
+            value: '50.0'
           type: Dynamic
         type: Values
       type: Float
@@ -1141,7 +1141,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '6.6666665'
+            value: '16.666666'
           type: Dynamic
         type: Values
       type: Float
@@ -1161,7 +1161,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '6.6666665'
+            value: '16.666666'
           type: Dynamic
         type: Values
       type: Float
@@ -1181,7 +1181,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '6.6666665'
+            value: '16.666666'
           type: Dynamic
         type: Values
       type: Float
@@ -1193,7 +1193,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '6.6666665'
+            value: '16.666666'
           type: Dynamic
         type: Values
       type: Float
@@ -1205,7 +1205,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '3.3333333'
+            value: '8.333333'
           type: Dynamic
         type: Values
       type: Float
@@ -1217,7 +1217,7 @@ data:
       - children:
         - attributes:
             id: adchs
-            value: '3.3333333'
+            value: '8.333333'
           type: Dynamic
         type: Values
       type: Float
@@ -1414,7 +1414,7 @@ data:
             value: 'true'
           type: Dynamic
         - attributes:
-            value: 'false'
+            value: 'true'
           type: User
         type: Values
       type: Boolean
@@ -1442,4 +1442,16 @@ data:
           type: Dynamic
         type: Values
       type: String
+    ADCHS_ADCIMCON1:
+      attributes:
+        id: ADCHS_ADCIMCON1
+        label: ADCIMCON1 Register
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
   userData: {}

@@ -45,13 +45,6 @@ private:
     
     static void ADC_Comp1_Handler(ADCHS_CHANNEL_NUM channel, uintptr_t context);
     
-    float U_W_IPD();
-    float V_W_IPD();
-    float V_U_IPD();
-    float W_U_IPD();
-    float W_V_IPD();
-    float U_V_IPD();
-    
     uint8_t IPD_Handler(uint32_t OVRDAT_3,uint32_t OVRDAT_5, uint32_t OVRDAT_6, float ipd_stat);
     
 public:

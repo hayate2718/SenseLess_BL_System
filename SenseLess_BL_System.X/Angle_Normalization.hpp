@@ -22,6 +22,7 @@ public:
     ~Angle_Normalization();
     
     void Set_Angle_Before(float angle_before);
+    float Get_Angle_Before(void);
     
     float Angle_Diff(float Angle);
     float Angle_Add(float Angle_Delta);

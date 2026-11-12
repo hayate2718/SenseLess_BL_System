@@ -5,8 +5,16 @@ Angle_Normalization::Angle_Normalization(){
     Angle_Before = 0;
 }
 
+Angle_Normalization::~Angle_Normalization(){
+    
+}
+
 void Angle_Normalization::Set_Angle_Before(float angle_before){
     this->Angle_Before = angle_before;
+}
+
+float Angle_Normalization::Get_Angle_Before(){
+    return this->Angle_Before;
 }
 
 float Angle_Normalization::Angle_Diff(float Angle){

@@ -16,6 +16,7 @@ uint8_t Use_UART1::User_TX_Buf[128] = {};
 
 bool Use_UART1::Read_Assign(){
     
+    /*
     uint8_t ReadCount = UART1_ReadCountGet();
     
     if(sizeof(Use_UART1::User_RX_Buf) >= ReadCount){
@@ -43,8 +44,10 @@ bool Use_UART1::Read_Assign(){
     memset((void*)Use_UART1::User_RX_Buf,NULL,sizeof(Use_UART1::User_RX_Buf));
     
     return true;
+    */
 }
 
+/*
 bool Use_UART1::Data_Assign(uint8_t* data){
     
     if(strncmp("help\n",(char*)data,5)==0){
@@ -99,3 +102,4 @@ bool Use_UART1::Data_Assign(uint8_t* data){
     
     return true;
 }
+*/

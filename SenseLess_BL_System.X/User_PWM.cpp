@@ -1,8 +1,18 @@
 #include "User_PWM.hpp"
 
+volatile uint8_t match_flag = 0;
+
 User_PWM::User_PWM(float supply_voltage){
     this->Supply_Voltage = supply_voltage;
-    MCPWM_CallbackRegister(MCPWM_CH_3,SLBL_System::MCPWM3_Match_Handler,NULL);
+    this->alpha_v = 0.0f;
+    this->beta_v = 0.0f;
+    
+    match_flag = 0;
+    MCPWM_CallbackRegister(MCPWM_CH_3,MCPWM3_Match_Handler,NULL);
+}
+
+User_PWM::~User_PWM(){
+    
 }
 
 void User_PWM::U_Voltage_Duty(float alpha_voltage){
@@ -23,18 +33,18 @@ void User_PWM::W_Voltage_Duty(float alpha_voltage, float beta_voltage){
     
 }
 
-void User_PWM::MCPWM3_Match_Handler(MCPWM_CH_STATUS status, uintptr_t context){
-    int mode = Default_Mode;
+void User_PWM::Vector_Voltage_Duty(float angle, float volt){
     
-    switch(mode){
-        case Default_Mode:
-            MCPWM_ChannelPrimaryDutySet(MCPWM_CH_3,0); //w
-            MCPWM_ChannelPrimaryDutySet(MCPWM_CH_5,0); //v
-            MCPWM_ChannelPrimaryDutySet(MCPWM_CH_6,0); //u
-            break;
-        
-        case OpenLoop_Mode:
-            break;
-    }
+    this->alpha_v = volt * cosf(angle);
+    this->beta_v = volt * sinf(angle);
+    
+    this->U_Voltage_Duty(this->alpha_v);
+    this->V_Voltage_Duty(this->alpha_v,this->beta_v);
+    this->W_Voltage_Duty(this->alpha_v,this->beta_v);
 
+}
+
+void MCPWM3_Match_Handler(MCPWM_CH_STATUS status, uintptr_t context){
+
+    match_flag = 1;
 }

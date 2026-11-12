@@ -41,7 +41,7 @@ void SLBL_IPD::ADC_Reset(){
 
     while(!ADCCON3bits.UPDRDY);
 
-    ADC0TIMEbits.SAMC = 50; //•ÏŠ·ƒŒ[ƒg1kHz
+    ADC0TIMEbits.SAMC = 50;
     ADC2TIMEbits.SAMC = 50;
 
     ADCTRGSNSbits.LVL0 = 0;
@@ -67,226 +67,6 @@ void SLBL_IPD::ADC_Comp1_Handler(ADCHS_CHANNEL_NUM channel, uintptr_t context){
     IOCON6bits.OVRDAT = 0b00;
 
     _ipd->IPD_Flag = true;
-
-}
-
-float SLBL_IPD::W_V_IPD(){
-
-    /////////////////////////////////////////////////////
-    //W->V
-    
-    uint32_t count_buf = 0;
-    
-    IPD_Flag = false;
-    TMR2 = 0;
-    TMR2_Start();
-
-    IOCON3bits.OVRDAT = 0b10;
-    IOCON5bits.OVRDAT = 0b01;
-    IOCON6bits.OVRDAT = 0b00;
-
-    ADCCON3bits.GLSWTRG = 1;
-    while(!IPD_Flag && TMR2<IPD_Time);
-    ADCCON3bits.GLSWTRG = 0;
-
-    IOCON3bits.OVRDAT = 0b00;
-    IOCON5bits.OVRDAT = 0b00;
-    IOCON6bits.OVRDAT = 0b00;
-
-    count_buf = TMR2_CounterGet();
-    if(this->IPD_Count >= count_buf){
-        this->IPD_Count = count_buf;
-        IPD_Stat = W_V;
-    }
-
-    TMR2 = 0;
-    TMR2_Start();
-    while(TMR2<6000);
-    TMR2_Stop();
-
-    return W_V;
-}
-
-float SLBL_IPD::W_U_IPD(){
-
-    /////////////////////////////////////////////////////
-    //W->U
-    
-    uint32_t count_buf = 0;
-    
-    IPD_Flag = false;
-    TMR2 = 0;
-    TMR2_Start();
-    
-    IOCON3bits.OVRDAT = 0b10;
-    IOCON5bits.OVRDAT = 0b00;
-    IOCON6bits.OVRDAT = 0b01;
-
-    ADCCON3bits.GLSWTRG = 1;
-    while(!IPD_Flag && TMR2<IPD_Time);
-    ADCCON3bits.GLSWTRG = 0;
-
-    IOCON3bits.OVRDAT = 0b00;
-    IOCON5bits.OVRDAT = 0b00;
-    IOCON6bits.OVRDAT = 0b00;
-
-    count_buf = TMR2_CounterGet();
-    if(this->IPD_Count >= count_buf){
-        this->IPD_Count = count_buf;
-        IPD_Stat = W_U;
-    }
-
-    TMR2 = 0;
-    TMR2_Start();
-    while(TMR2<6000);
-    TMR2_Stop();
-
-    return W_U;
-}
-
-float SLBL_IPD::V_U_IPD(){
-        /////////////////////////////////////////////////////
-    //V->U
-    
-    uint32_t count_buf = 0;
-    
-    IPD_Flag = false;
-    TMR2 = 0;
-    TMR2_Start();
-
-    IOCON3bits.OVRDAT = 0b00;
-    IOCON5bits.OVRDAT = 0b10;
-    IOCON6bits.OVRDAT = 0b01;
-
-    ADCCON3bits.GLSWTRG = 1;
-    while(!IPD_Flag && TMR2<IPD_Time);
-    ADCCON3bits.GLSWTRG = 0;
-
-    IOCON3bits.OVRDAT = 0b00;
-    IOCON5bits.OVRDAT = 0b00;
-    IOCON6bits.OVRDAT = 0b00;
-
-    count_buf = TMR2_CounterGet();
-    if(this->IPD_Count >= count_buf){
-        this->IPD_Count = count_buf;
-        IPD_Stat = V_U;
-    }
-
-    TMR2 = 0;
-    TMR2_Start();
-    while(TMR2<6000);
-    TMR2_Stop();
-
-    return V_U;
-}
-
-float SLBL_IPD::V_W_IPD(){
-        /////////////////////////////////////////////////////
-    //V->W
-    
-    uint32_t count_buf = 0;
-    
-    IPD_Flag = false;
-    TMR2 = 0;
-    TMR2_Start();
-
-    IOCON3bits.OVRDAT = 0b01;
-    IOCON5bits.OVRDAT = 0b10;
-    IOCON6bits.OVRDAT = 0b00;
-
-    ADCCON3bits.GLSWTRG = 1;
-    while(!IPD_Flag && TMR2<IPD_Time);
-    ADCCON3bits.GLSWTRG = 0;
-
-    IOCON3bits.OVRDAT = 0b00;
-    IOCON5bits.OVRDAT = 0b00;
-    IOCON6bits.OVRDAT = 0b00;
-
-    count_buf = TMR2_CounterGet();
-    if(this->IPD_Count >= count_buf){
-        this->IPD_Count = count_buf;
-        IPD_Stat = V_W;
-    }
-    
-    TMR2 = 0;
-    TMR2_Start();
-    while(TMR2<6000);
-    TMR2_Stop();
-
-    return V_W;
-}
-
-float SLBL_IPD::U_V_IPD(){
-        /////////////////////////////////////////////////////
-    //U->V
-    
-    uint32_t count_buf = 0;
-    
-    IPD_Flag = false;
-    TMR2 = 0;
-    TMR2_Start();
-
-    IOCON3bits.OVRDAT = 0b00;
-    IOCON5bits.OVRDAT = 0b01;
-    IOCON6bits.OVRDAT = 0b10;
-
-    ADCCON3bits.GLSWTRG = 1;
-    while(!IPD_Flag && TMR2<IPD_Time);
-    ADCCON3bits.GLSWTRG = 0;
-
-    IOCON3bits.OVRDAT = 0b00;
-    IOCON5bits.OVRDAT = 0b00;
-    IOCON6bits.OVRDAT = 0b00;
-
-    count_buf = TMR2_CounterGet();
-    if(this->IPD_Count >= count_buf){
-        this->IPD_Count = count_buf;
-        IPD_Stat = U_V;
-    }
-
-    TMR2 = 0;
-    TMR2_Start();
-    while(TMR2<6000);
-    TMR2_Stop();
-
-    return U_V;
-
-}
-
-float SLBL_IPD::U_W_IPD(){
-        /////////////////////////////////////////////////////
-    //U->W
-    
-    uint32_t count_buf = 0;
-    
-    IPD_Flag = false;
-    TMR2 = 0;
-    TMR2_Start();
-
-    IOCON3bits.OVRDAT = 0b01;
-    IOCON5bits.OVRDAT = 0b00;
-    IOCON6bits.OVRDAT = 0b10;
-
-    ADCCON3bits.GLSWTRG = 1;
-    while(!IPD_Flag && TMR2<IPD_Time);
-    ADCCON3bits.GLSWTRG = 0;
-
-    IOCON3bits.OVRDAT = 0b00;
-    IOCON5bits.OVRDAT = 0b00;
-    IOCON6bits.OVRDAT = 0b00;
-
-    count_buf = TMR2_CounterGet();
-    if(this->IPD_Count >= count_buf){
-        this->IPD_Count = count_buf;
-        IPD_Stat = U_W;
-    }
-
-    TMR2 = 0;
-    TMR2_Start();
-    while(TMR2<6000);
-    TMR2_Stop();
-
-    return U_W;
 
 }
 
@@ -329,7 +109,7 @@ float SLBL_IPD::IPD_Start(){
     uint8_t write_buf[32] = {};
 
     MCPWM_Stop();
-    PWMCON3bits.PWMLIEN = false; //PWM Interrupt disable
+    PWMCON3bits.PWMHIEN = false; //PWM Interrupt disable
 
     this->ADC_IPD_Mode();
 
@@ -342,16 +122,6 @@ float SLBL_IPD::IPD_Start(){
     MCPWM_ChannelPinsOverrideEnable(MCPWM_CH_3);
     MCPWM_ChannelPinsOverrideEnable(MCPWM_CH_5);
     MCPWM_ChannelPinsOverrideEnable(MCPWM_CH_6);
-    
-    /*
-    //main ipd process
-    this->U_V_IPD();
-    this->U_W_IPD();
-    this->V_U_IPD();
-    this->V_W_IPD();
-    this->W_U_IPD();
-    this->W_V_IPD();
-    */
     
     //U@-> V
     this->IPD_Handler(0b00,0b01,0b10,U_V);
@@ -377,7 +147,8 @@ float SLBL_IPD::IPD_Start(){
     MCPWM_ChannelPinsOverrideDisable(MCPWM_CH_6);
 
     MCPWM_Stop();
-    PWMCON3bits.PWMLIEN = true; //PWM Interrupt enable
+    this->ADC_Reset();
+    PWMCON3bits.PWMHIEN = true; //PWM Interrupt enable
     MCPWM_Start();
 
     return this->IPD_Stat;

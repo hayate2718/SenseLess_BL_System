@@ -54,6 +54,7 @@ int main ( void )
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */
         SYS_Tasks ( );
+        slbl_system.Open_Loop();
     }
 
     /* Execution should not come here during normal operation */
